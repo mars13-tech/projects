@@ -1,62 +1,57 @@
-GPT Assistant v0.2 🤖
+```markdown
+# GPT Assistant v0.2 🤖
 
-GPT Assistant v0.2 is a Python-based AI assistant that can hold a **conversation with memory** using OpenAI's GPT-3.5 model. It remembers your previous questions and answers, making interactions more natural — just like talking to a real assistant.
+GPT Assistant v0.2 is a Python-based AI assistant that can hold a conversation with memory using OpenAI's GPT-3.5 model.
 
+## 🚀 Features
 
-🚀 Features
+- Multi-turn chat with memory
+- Real-time user input and assistant response
+- Uses OpenAI's gpt-3.5-turbo model
+- Clean exit with "exit" or "quit"
 
-- Interactive chat loop (type and get responses instantly)
-- Assistant remembers full conversation history
-- Powered by OpenAI GPT-3.5 (`gpt-3.5-turbo`)
-- Exits when you type `exit` or `quit`
+## 🛠️ Setup
 
+1. Install OpenAI Python SDK:
+```
 
-🧠 How It Works
-
-The assistant uses a list called `conversation` to store the full chat history:
-
-```python
-conversation = [
-    {"role": "system", "content": "You are a helpful AGI assistant."},
-    {"role": "user", "content": "Hi"},
-    {"role": "assistant", "content": "Hello! How can I help you?"},
-    ...
-]
-Each message is sent to OpenAI API so the assistant replies with full context.
-
-🛠️ Setup Instructions
-
-1. Install OpenAI SDK
 pip install openai
 
-2. Set Your OpenAI API Key
-Replace "your-api-key-here" with your actual API key:
-openai.api_key = "sk-..."  # from https://platform.openai.com/account/api-keys
+````
 
-3. Run the Assistant
-python gpt_assistant_v0_2.py
+2. Replace your API key in the script:
+```python
+openai.api_key = "your-api-key-here"
+````
 
-📄 Example
+3. Run the script:
 
-You: Hi
+   ```
+   python gpt_assistant_v0_2.py
+   ```
+
+## 📄 Example
+
+```
+You: Hello
 AGI Assistant: Hello! How can I assist you today?
 
-You: What is Python?
-AGI Assistant: Python is a high-level programming language...
+You: Tell me a joke
+AGI Assistant: Why don't scientists trust atoms? Because they make up everything!
+```
 
-💡 Learning Purpose
-This version is a stepping stone to building full AGI systems. It teaches:
+## 📚 How It Works
 
-   1.API usage
+All messages are stored in a `conversation` list with roles: `system`, `user`, and `assistant`. This history is sent to GPT on each request for context-aware replies.
 
-   2.Chat history management
+## 🧱 Roadmap
 
-   3.Role-based message formatting
+* v0.1: Single-turn assistant
+* ✅ v0.2: Multi-turn memory
 
-   4.Input/output handling in Python
+## 🧠 Author
 
-📜 License
-MIT License — use it, improve it, share it!
+Built by Karthi Keyan as part of an AGI learning journey.
 
-🙏 Credits
-Built by Karthi Keyan as part of a personal AGI learning journey.
+```
+```
