@@ -1,53 +1,123 @@
-ResumeGPT — Instantly Improve Your Resume Using GPT
+## ✅ Final `README.md` for ResumeGPT
 
-This tool helps you instantly upgrade your resume using GPT-3.5.
+````markdown
+# 📄 ResumeGPT – Instantly Improve Your Resume Using GPT-3.5
 
----
-
-🛠 What It Does
-
-- Reads your resume from `raw_resume.txt`
-- Sends it to GPT-3.5 with a prompt
-- Saves the improved resume in `improved_resume.txt`
+**ResumeGPT** is a Python tool and web app that improves your raw resume using OpenAI's GPT-3.5, making it more professional and ATS-optimized.
 
 ---
 
-📦 What's Included
+## 🔧 Features
 
-- `main.py` — the core script  
-- `README.md` — setup instructions  
-You will create `raw_resume.txt` and `improved_resume.txt` as part of setup.
+- ✅ Text-based input (paste your resume)
+- ✅ GPT-3.5 powered improvement
+- ✅ Streamlit web interface
+- ✅ Clean and beginner-friendly code
 
 ---
 
-💡 Requirements
+## 📦 What You Get
+
+- `resume_gpt.py` – GPT logic (reusable in CLI or web)
+- `resume_web.py` – Streamlit web UI
+- `README.md` – Setup & usage instructions
+
+---
+
+## 💡 Requirements
 
 - Python 3.7+
-- OpenAI account and API key
+- OpenAI API Key *(get one here: https://platform.openai.com/account/api-keys)*  
+- Packages: `openai`, `streamlit`
 
 ---
 
-🔧 How to Use
+## ⚙️ Setup Instructions
 
-1. Create files:
-raw_resume.txt inside the file enter your resume details
-improved_resume.txt In a same main.py folder
+### 1. Clone / Download the project
 
-1. Install OpenAI library:
 ```bash
-pip install openai
-pip install os
+cd path/to/your/folder
+````
 
-2. Get your API key from:
-https://platform.openai.com/account/api-keys
+### 2. Install required packages
 
-3. Set your API key in terminal:
+```bash
+pip install openai streamlit
+```
 
-Windows:
+### 3. Set your OpenAI API key
+
+**Windows:**
+
+```bash
 set OPENAI_API_KEY=your-key-here
+```
 
-macOS/Linux:
+**macOS/Linux:**
+
+```bash
 export OPENAI_API_KEY=your-key-here
+```
 
-4. Run the tool:
-python main.py
+---
+
+## 🚀 Option A: Run the Streamlit Web App
+
+```bash
+cd resume_GPT
+streamlit run resume_web.py
+```
+
+You’ll see a web UI where you can paste your resume and instantly get an improved version.
+
+---
+
+## 🧪 Option B: Run the Python Script (CLI)
+
+1. Create a file named `raw_resume.txt` and paste your resume inside.
+
+2. Run this simple script (create `test_cli.py` if needed):
+
+```python
+from resume_gpt import improve_resume
+
+with open("raw_resume.txt", "r") as f:
+    resume = f.read()
+
+improved = improve_resume(resume)
+
+with open("improved_resume.txt", "w") as f:
+    f.write(improved)
+
+print("✅ Improved resume saved as improved_resume.txt")
+```
+
+---
+
+## 🔒 Disclaimer
+
+* This tool **requires your own OpenAI API key**
+* API key is **not included** in the product for security reasons
+* Resume quality depends on the input you provide
+
+---
+
+## 🧠 Made for
+
+* Job seekers 🧑‍💻
+* Freelancers ✍️
+* Students & freshers 👨‍🎓
+* Developers looking to ATS-optimize their resume
+
+---
+
+Feel free to customize, fork, or build on top of ResumeGPT.
+
+```
+
+---
+
+Would you like me to generate a `.zip` of this structure with everything ready to upload or share?
+```
+
